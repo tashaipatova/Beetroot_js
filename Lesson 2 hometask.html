@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hometask for Lesson 2 (JS)</title>
+</head>
+<body>
+    <script>
+        var userLogin = prompt ("Кто пришел?"),
+        userPassword;
+
+        if (userLogin=="Админ") {
+            userPassword = prompt("Пароль?");
+            if (userPassword == "Чёрный Властелин") {
+                alert("Добро пожаловать!");
+            }
+            else if (!userPassword) {
+                alert("Вход отменен");
+            }
+            else {
+                alert("Пароль неверен");
+            }
+        }
+        else if (!userLogin){
+            alert ("Вход отменен");
+        }
+        else {
+            alert("Я Вас не знаю");
+        }
+
+    </script>
+</body>
+</html>
