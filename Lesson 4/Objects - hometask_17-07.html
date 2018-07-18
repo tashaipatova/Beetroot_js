@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS. Подсчет кол-ва повторяющихся слов в тексте</title>
+</head>
+<body>
+    <script>
+        /*Задача на дом. Дается случайный текст без знаков препинания, в котором все слова разделены только одним пробелом.
+        Больших букв нет (не должно быть).
+        * Надо подсчитать сколько раз встречается каждое слово в тексте. Вывести это в консоль.
+        * Используются объекты т.к. в них каждый ключ уникальный. Ключом будет выступать слово из текста*/
+
+
+        var initialText = prompt('Введите текст:');
+
+        //setting some default text
+        if (!initialText){
+            initialText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at suscipit ex. Nunc ut tincidunt ' +
+             'metus. Nam turpis est, finibus sed fermentum id, molestie nec justo. Donec finibus ex turpis. Interdum et ' +
+             'malesuada fames ac ante ipsum primis in faucibus. Cras arcu turpis, sodales eget neque elementum, ' +
+             'porttitor tristique justo. Aenean venenatis quam erat, et convallis sem aliquam ac. Ut eget dignissim ' +
+             'lectus, ut mollis lectus. Nam pellentesque arcu a tortor luctus tempus. Fusce quam leo, sodales nec ' +
+             'tincidunt ut, maximus sed sapien. Sed tincidunt nisi euismod nisi tincidunt mollis. Vestibulum leo nisi, ' +
+             'viverra eu ex id, lacinia venenatis enim.';
+        }
+
+        //converting all words to lower case
+        var tempString = initialText.toLowerCase();
+        //removing all commas and fullstops from the text if there are any
+        if(tempString.indexOf(',') != -1){
+            tempString = tempString.replace(',', '');
+        }
+        if(tempString.indexOf('.') != -1){
+            tempString = tempString.replace('.', '');
+        }
+        //placing each word into array
+        var tempArray = tempString.split(' ');
+
+        //adding keys and values into the object
+        var wordsList = {};
+        for (var i = 0; i < tempArray.length; ++i)
+        {
+            var key = tempArray[i];
+            if (wordsList[key] != undefined) {
+                ++wordsList[key];
+            }
+            else {
+                wordsList[key] = 1;
+            }
+        }
+
+        //showing the list of words and their amounts in console
+        for (var key in wordsList){
+            console.log(key + ': ' + wordsList[key]);
+        }
+
+
+    </script>
+</body>
+</html>
