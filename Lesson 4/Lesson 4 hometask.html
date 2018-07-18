@@ -21,9 +21,10 @@
 		console.log(arr); // [1, 2, 3]
 		*/
 
-        var newArray = [];
+
         function square(x) { return x * x; }
         function map(fn, array) {
+            var newArray = [];
             for (var i = 0; i < array.length; i++){
                 newArray[i] = fn(array[i]);
             }
