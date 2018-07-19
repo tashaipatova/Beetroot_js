@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hometask for Lesson 2 (JS)</title>
+    <title>Hometask for Lesson 4 (JS)</title>
 </head>
 <body>
     <script>
@@ -21,22 +21,25 @@
 		console.log(arr); // [1, 2, 3]
 		*/
 
+        var testArray = [1, 2, 3, 4, 5];
 
-        function square(x) { return x * x; }
+        console.log( map(square, testArray) );
+        console.log( map(square, [6, 7, 8, 9, 10]) );
+
+        function square(x) {
+            return x * x;
+        }
+
         function map(fn, array) {
             var newArray = [];
+
             for (var i = 0; i < array.length; i++){
                 newArray[i] = fn(array[i]);
             }
+
             return newArray;
         }
 
-        var testArray = [1, 2, 3, 4, 5];
-        console.log(map(square, testArray));
-        console.log(map(square, [6, 7, 8, 9, 10]));
-
-
-		
     </script>
 </body>
 </html>

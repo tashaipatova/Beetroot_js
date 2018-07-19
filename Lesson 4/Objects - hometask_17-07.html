@@ -27,13 +27,16 @@
 
         //converting all words to lower case
         var tempString = initialText.toLowerCase();
+
         //removing all symbols that are not words or numbers, including double spaces from the text if there are any
         tempString = tempString.replace(/[^\w\s]*/g, '').replace(/\s{2,}/g, " ");
+
         //placing each word into array
         var tempArray = tempString.split(' ');
 
         //adding keys and values into the object
         var wordsList = {};
+
         for (var i = 0; i < tempArray.length; ++i)
         {
             var key = tempArray[i];
@@ -49,7 +52,6 @@
         for (var key in wordsList){
             console.log(key + ': ' + wordsList[key]);
         }
-
 
     </script>
 </body>

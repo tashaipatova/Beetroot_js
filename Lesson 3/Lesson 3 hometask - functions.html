@@ -14,26 +14,38 @@
 		*/
 		alert ("Программа выводит простые числа из указанного пользователем диапазона");
 
-        var min_num, max_num;
+        var minNum, maxNum;
 
 		do {
-            min_num =  parseInt(prompt ("Введите целое число больше единицы", '2'), 10);
-        } while (min_num < 2  || isNaN(min_num)); //isNaN(min_num) - проверка являются ли введенные данные не числом
+            minNum =  parseInt(prompt ("Введите целое число больше единицы", '2'), 10);
+        } while ( minNum < 2  || isNaN(minNum) ); //isNaN(minNum) - проверка являются ли введенные данные не числом
 
         do {
-            max_num =  parseInt(prompt ("Введите целое число больше первого числа", '10'), 10);
-        } while (max_num < min_num || isNaN(min_num));
+            maxNum =  parseInt(prompt ("Введите целое число больше первого числа", '10'), 10);
+        } while ( maxNum < minNum || isNaN(maxNum) );
+
+
+        //отображаем полученный массив
+        var array = getPrimes(minNum, maxNum);
+
+        for (var i = 0; i < array.length; i++){
+            console.log(array[i]);
+        }
+
 
         //функция для проверки является ли число простым
         function isPrime(n){
-            if (n ==1 ) // 1 - не
-                // простое число
+            if (n == 1){ // 1 - не
+            // простое число
                 return false;
+            }
+
             // перебираем возможные делители от 2 до sqrt(n)
             for (var d = 2; d*d <= n; d++){
                 if (n%d == 0)
                     return false; //число не является простым
             }
+
             //иначе число простое
             return true;
         }
@@ -41,32 +53,30 @@
         //функция отображает в консоли простые числа из предложенного пользователем диапазона
         function showPrimes(min, max){
             console.log('Данная функция отображает в консоли простые числа из предложенного пользователем диапазона');
+
             for (var i = min; i < max; i++) {
-                if (isPrime(i)){
+                if ( isPrime(i) ){
                     console.log(i);
                 }
             }
         }
-        showPrimes(min_num, max_num);
+        showPrimes(minNum, maxNum);
 
         //функция возвращает массив простых чисел из предложенного пользователем диапазона
         function getPrimes(min, max){
             console.log('Эта функция возвращает массив простых чисел из предложенного пользователем диапазона');
+
             var arr = [];
             var j = 0;
+
             for (var i = min; i < max; i++) {
-                if (isPrime(i)){
+                if ( isPrime(i) ){
                     arr[j] = i;
                     j++;
                 }
             }
-            return arr;
-        }
 
-        //отображаем полученный массив
-        var array = getPrimes(min_num, max_num);
-        for (var i = 0; i < array.length; i++){
-            console.log(array[i]);
+            return arr;
         }
 
     </script>

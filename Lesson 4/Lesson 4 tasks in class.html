@@ -36,7 +36,8 @@
             }
             return sum;
         }
-        console.log(getSum(salaries));
+
+        console.log( getSum(salaries) );
 
 
         /*
@@ -59,15 +60,18 @@
         function getRich(obj) {
             var maxSalary = 0;
             var name = "";
+
             for (var key in obj) {
                 if (maxSalary < obj[key]) {
                     maxSalary = obj[key];
                     name = key;
                 }
             }
+
             return name;
         }
-        console.log(getRich(salaries) || "В данном списке нет сотрудника, получающего больше остальных");
+
+        console.log( getRich(salaries) || "В данном списке нет сотрудника, получающего больше остальных" );
 
     </script>
 </body>
