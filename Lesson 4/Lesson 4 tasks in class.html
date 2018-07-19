@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS. Lesson 4 - Classwork</title>
+    <!--<script src="Lesson4_tasks_in_class.js"></script>-->
+</head>
+<body>
+    <script>
+        /*
+		Работа на уроке - задание для студентов
+	1.	Сумма свойств
+		Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
+		Если объект пустой, то результат должен быть 0.
+		Например:
+
+		"usestrict";
+
+		var salaries = {
+		"Вася": 100,
+		"Петя": 300,
+		"Даша": 250
+		};
+		//... ваш код выведет 650
+		*/
+        var salaries = {
+            "Вася": 100,
+            "Петя": 300,
+            "Даша": 250
+        };
+
+        function getSum(obj){
+            var sum = 0;
+            for (var key in obj){
+                sum += obj[key];
+            }
+            return sum;
+        }
+        console.log(getSum(salaries));
+
+
+        /*
+        2.	Свойство с наибольшим значением
+        Есть объект salaries с зарплатами. Напишите код, который выведет имя сотрудника, у которого самая большая зарплата.
+
+        Если объект пустой, то пусть он выводит «нет сотрудников».
+        Например:
+        "usestrict";
+
+        var salaries = {
+        "Вася": 100,
+        "Петя": 300,
+        "Даша": 250
+        };
+
+        //... ваш код выведет Петя
+        */
+
+        function getRich(obj) {
+            var maxSalary = 0;
+            var name = "";
+            for (var key in obj) {
+                if (maxSalary < obj[key]) {
+                    maxSalary = obj[key];
+                    name = key;
+                }
+            }
+            return name;
+        }
+        console.log(getRich(salaries) || "В данном списке нет сотрудника, получающего больше остальных");
+
+    </script>
+</body>
+</html>
