@@ -15,14 +15,14 @@
 		alert ("Программа выводит простые числа из указанного диапазона");
 
         var min_num, max_num;
+
 		do {
             min_num =  parseInt(prompt ("Введите целое число больше единици", '2'), 10);
-        } while (min_num < 2);
+        } while (min_num < 2  || isNaN(min_num)); //isNaN(min_num) - проверка являются ли введенные данные не числом
 
         do {
             max_num =  parseInt(prompt ("Введите целое число больше первого числа", '10'), 10);
-        } while (max_num < min_num);
-
+        } while (max_num < min_num || isNaN(min_num));
 
         //функция для проверки является ли число простым
         function isPrime(n){
