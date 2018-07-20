@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional hometask 20-07</title>
+</head>
+<body>
+    <script>
+        //===========================================================================================================
+        //функции для генерации случайных чисел и массивов
+        function getRandomNumber(min, max){
+            return Math.floor( Math.random() * (max - min + 1) + min );
+        }
+
+        function getRandomArray(min, max, quantity){
+            var resultArray = [];
+
+            for (var i = 0; i < quantity; i++){
+                resultArray[i] = getRandomNumber(min, max);
+            }
+
+            return resultArray;
+        }
+
+        //===========================================================================================================
+        /*
+        1. Написать функцию filter, которая принимает массив и функцию-фильтр. Результат работы - новый массив,
+        полученный путем применения функции-фильтра к каждому элементу исходного массива.
+        Функция - фильтр принимает один аргумент и возвращает  true или false.
+        Все массивы в задачах должны быть сгенерированы из случайных чисел.
+        */
+
+        //Эта функция поможет отфильтровать четные элементы из исходного массива.
+        function isEven(x) {
+            if (x % 2 === 0) {
+                return true;
+            }
+        }
+
+        function getFilteredArray(fn, arr){
+            var resultArray = [];
+
+            for (var i = 0; i < arr.length; i++){
+
+                if( fn(arr[i]) ){
+                    resultArray.push(arr[i]);
+                }
+            }
+
+            return resultArray;
+        }
+
+        var testArray = getRandomArray(1, 100, 15);
+
+        //выведем сгенерированный исходный массив
+        console.log("Исходный массив:\n" + testArray);
+
+        //выведем обработанный массив
+        console.log("Обработанный массив:\n" + getFilteredArray(isEven, testArray) );
+
+        //или при желании создадим переменную и занесем обработанный массив в неё, затем выведем в консоль
+        var filteredArray = getFilteredArray(isEven, testArray);
+
+        console.log("Обработанный массив в переменной:\n" + filteredArray);
+
+        //===========================================================================================================
+        /*
+        2. Написать функцию, которая принимает год и сообщает високосный он или нет. Валидация данных необходима.
+        */
+        function isLeapYear(year) {
+            if( ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0) )
+                return true;
+
+            //вариант 2: проверка есть ли в указанном году 29 февраля
+            /*
+            if (new Date(year, 1, 29).getDate() === 29)
+                return true;
+            */
+
+            else
+                return false;
+        }
+
+        var checkYear;
+
+        do {
+            checkYear =  parseInt(prompt ("Введите год"), 10);
+        } while ( isNaN(checkYear) || checkYear < 1 );
+
+        if( isLeapYear(checkYear) )
+            console.log('Это високосный год');
+        else
+            console.log('Это не високосный год');
+
+
+        //=============================================================================================================
+        /*
+        3.Написать функцию, которая принимает число от 0 до 10000 и сообщает, сколько в нем тысяч, сотен,
+        десятков и единиц.
+        */
+
+        function showNumericalOrders(num){
+            console.log( 'тысячи: ' + Math.floor(num / 1000) );
+            console.log( 'сотни: ' + Math.floor( (num % 1000) / 100) );
+            console.log( 'десятки: ' + Math.floor( (num % 100) / 10) );
+            console.log( 'единицы: ' + Math.floor(num % 10) );
+        }
+
+        var checkNum = getRandomNumber(0, 10000);
+
+        console.log('Сгенерированное число: ' + checkNum);
+
+        showNumericalOrders(checkNum);
+        //=============================================================================================================
+
+    </script>
+</body>
+</html>
