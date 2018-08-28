@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 7px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+.card-back{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    border-radius: 7px;
+    border: 1px solid black;
+    background-color: lightsteelblue;
+}
+
+.card p{
+    font-size: 100px;
+    line-height: 300px;
+}
+
+.card:before,
+.card:after {
+    white-space: pre;
+    position: absolute;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.card:before {
+    top: 5px;
+    left: 5px;
+}
+
+.card:after {
+    bottom: 5px;
+    right: 5px;
+    transform: rotateX(180deg);
+}
+
+.card.diamonds p,
+.card.hearts p {
+    color: red;
+}
+
+.card.spades p,
+.card.clubs p {
+    color: black;
+}
+
+.card.diamonds:before,
+.card.diamonds:after {
+    content: "A\A\25C6";
+    color: red;
+}
+
+.card.hearts:before,
+.card.hearts:after {
+    content: "A\A\2665";
+    color: red;
+}
+
+.card.spades:before,
+.card.spades:after {
+    content: "A\A\2660";
+    color: black;
+}
+
+.card.clubs:before,
+.card.clubs:after {
+    content: "A\A\2663";
+    color: black;
+}
+
+
+.row {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+/* ========================= ROW SCALE ===================== */
+.row.scale .card {
+    margin-right: 10px;
+    transition: 1s;
+}
+
+.row.scale .card:hover {
+    transform: scale(1.2, 1.2);
+    z-index: 2;
+}
+
+/* ========================= ROW DESK ===================== */
+.row.desk {
+    position: relative;
+}
+
+.row.desk .card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: 1s;
+}
+
+.row.desk:hover .card {
+    transform-origin: bottom left;
+}
+
+.row.desk:hover .card:nth-child(2) {
+    transform-origin: bottom left;
+    transform: rotateZ(10deg);
+}
+.row.desk:hover .card:nth-child(3) {
+    transform-origin: bottom left;
+    transform: rotateZ(20deg);
+}
+.row.desk:hover .card:nth-child(4) {
+    transform-origin: bottom left;
+    transform: rotateZ(30deg);
+}
+
+
+/* ========================= ROW ROTATE ===================== */
+.row.rotate {
+    width: 200px;
+    height: 300px;
+    position: relative;
+
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.row.rotate:hover {
+    transform: rotateY(180deg);
+}
+
+.row.rotate .card.diamonds {
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+
+.row.rotate .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
