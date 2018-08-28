@@ -128,8 +128,8 @@
 }
 
 
-/* ========================= ROW ROTATE ===================== */
-.row.rotate {
+/* ========================= ROW FLIP ===================== */
+.row.flip {
     width: 200px;
     height: 300px;
     position: relative;
@@ -138,17 +138,17 @@
     transform-style: preserve-3d;
 }
 
-.row.rotate:hover {
+.row.flip:hover {
     transform: rotateY(180deg);
 }
 
-.row.rotate .card.diamonds {
+.row.flip .card.diamonds {
     position: absolute;
     backface-visibility: hidden;
 
 }
 
-.row.rotate .card-back {
+.row.flip .card-back {
     position: absolute;
     backface-visibility: hidden;
     transform: rotateY(180deg);
