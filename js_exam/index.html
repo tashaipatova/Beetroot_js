@@ -19,12 +19,13 @@
 <body>
     <!--================= Start page =======================-->
     <section class="intro_page">
+        <img src="img/bg_start.jpg"">
         <div class="content main">
 
             <!--================= Menu above the Start page =======================-->
             <nav class="header_menu">
                     <h3 class="logo">Bouncy</h3>
-                    <ul>
+                    <ul><!--Open Sans, Regular, 16px, #ffffff-->
                         <li><a href="#">Hello</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#team">Team</a></li>
@@ -32,13 +33,13 @@
                     </ul>
             </nav>
 
-
-
+            <!--================= Start page main content =======================-->
             <!--bg main opacity 50% -->
-            <h1>We Are Code Cafe</h1> <!-- Source Sans Pro, Light, 35px, uppercase, #ffffff-->
-            <!--Open Sans, Regular, 16px, #ffffff-->
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-
+            <div class="slogan">
+                <h1>We Are Code Cafe</h1> <!-- Source Sans Pro, Light, 35px, uppercase, #ffffff-->
+                <!--Open Sans, Regular, 16px, #ffffff-->
+                <h2>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h2>
+            </div>
 
 
             <div class="scroll">
@@ -50,26 +51,68 @@
     </section>
 
 
-    <!--================= portfolio =======================-->
+    <!-- ================= portfolio ======================= -->
     <section id="portfolio" class="portfolio"> <!-- background: #f3f3f3 -->
         <div class="content">
             <h3>THE PORTFOLIO</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
             <!--Open Sans, Regular, 14px, #81868e-->
 
-            <!-- Open Sans, Regular, 16px, #464646,
-            hover - underline
-            width: 38px;
-            height: 1px;
-            #19bd9a-->
-            All Works
-            Print
-            Branding
-            Web
-            HTML
+
+            <div>
+                <!-- Open Sans, Regular, 16px, #464646,
+                hover - underline, width: 38px; height: 1px; #19bd9a-->
+                <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">All Works</button>
+                    <button class="button" data-filter=".portfolio_print">Print</button>
+                    <button class="button" data-filter=".portfolio_branding">Branding</button>
+                    <button class="button" data-filter=".portfolio_web">Web</button>
+                    <button class="button" data-filter=".portfolio_html">HTML</button>
+                </div>
+                <div class="grid">
+                    <div class="element-item portfolio_branding " data-category="portfolio_branding">
+                        <img src="img/portfolio_01.jpg">
+                    </div>
+                    <div class="element-item portfolio_print " data-category="portfolio_print">
+                        <img src="img/portfolio_02.jpg">
+                    </div>
+                    <div class="element-item portfolio_print " data-category="portfolio_print">
+                        <img src="img/portfolio_03.jpg">
+                    </div>
+                    <div class="element-item portfolio_branding " data-category="portfolio_branding">
+                        <img src="img/portfolio_04.jpg">
+                    </div>
+                    <div class="element-item portfolio_web " data-category="portfolio_web">
+                        <img src="img/portfolio_05.jpg">
+                    </div>
+                    <div class="element-item portfolio_web " data-category="portfolio_web">
+                        <img src="img/portfolio_06.jpg">
+                    </div>
+                    <div class="element-item portfolio_html " data-category="portfolio_html">
+                        <img src="img/portfolio_07.jpg">
+                    </div>
+                    <div class="element-item portfolio_branding " data-category="portfolio_branding">
+                        <img src="img/portfolio_08.jpg">
+                    </div>
+                    <div class="element-item portfolio_branding " data-category="portfolio_branding">
+                        <img src="img/portfolio_09.jpg">
+                    </div>
+                    <div class="element-item portfolio_print " data-category="portfolio_print">
+                        <img src="img/portfolio_10.jpg">
+                    </div>
+                    <div class="element-item portfolio_web " data-category="portfolio_web">
+                        <img src="img/portfolio_11.jpg">
+                    </div>
+                    <div class="element-item portfolio_html " data-category="portfolio_html">
+                        <img src="img/portfolio_12.jpg">
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
-    <!--================= Team =======================-->
+
+    <!-- ================= Team ======================= -->
     <section id="team" class="team"> <!-- background: #ffffff -->
         <div class="content">
             <h3>THE TEAM</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
@@ -77,48 +120,68 @@
             <!--Open Sans, Regular, 14px, #81868e-->
 
             <!-- slider -->
-    <div class="slick">
-        <section class="container">
-            <div class="slide">
-                <img src="img/team_abdullah.jpg"  alt="slide" />
-                <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
-                    <div class="social_icons">
+            <div class="slick_team">
+                <section class="container">
+                    <div class="slide">
+                        <img src="img/team_abdullah.jpg"  alt="slide" />
+                        <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
+                            <div class="social_icons">
+                            </div>
+                        </div>
+                        <div class="team_description">
+                            <p class="user_name">Abdullah Noman</p>
+                            <p class="user_position">Creative Director, Code Cafe</p>
+                            <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
+                                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
+                                iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
+                                ducimus qui blanditiis praesentium.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="team_description">
-                    <p>Abdullah Noman</p><!-- Open Sans, Regular, 20px, #464646, text-align: right -->
-                    <p>Creative Director, Code Cafe</p><!--Source Sans Pro, Light, 14px, uppercase, #81868e-->
-                    <!-- Open Sans, Regular, 14px, #81868e, text-align: right -->
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
-                        accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
-                        iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
-                        ducimus qui blanditiis praesentium.
-                    </p>
-                </div>
+                    <div class="slide">
+                        <img src="img/team_abdullah.jpg"  alt="slide" />
+                        <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
+                            <div class="social_icons">
+                            </div>
+                        </div>
+                        <div class="team_description">
+                            <p class="user_name">Abdullah Noman</p>
+                            <p class="user_position">Creative Director, Code Cafe</p>
+                            <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
+                                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
+                                iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
+                                ducimus qui blanditiis praesentium.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/team_abdullah.jpg"  alt="slide" />
+                        <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
+                            <div class="social_icons">
+                            </div>
+                        </div>
+                        <div class="team_description">
+                            <p class="user_name">Abdullah Noman</p>
+                            <p class="user_position">Creative Director, Code Cafe</p>
+                            <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
+                                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
+                                iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
+                                dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
+                                ducimus qui blanditiis praesentium.
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="slide">
-                <img src="img/slide2.jpg"  alt="slide" />
-                <div class="hover">
-                    <p>Apex Magazine June Issue</p>
-                    <p>by Fabrizio Morra</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="img/slide3.jpg"  alt="slide" />
-                <div class="hover">
-                    <p>Apex Magazine June Issue</p>
-                    <p>by Fabrizio Morra</p>
-                </div>
-            </div>
-        </section>
-    </div>
 
 
 
         </div>
     </section>
-    <!--================= Example 1 =======================-->
+
+    <!--================= Contact us button below the Team section =======================-->
     <section class="team_contact">
         <div class="content">
             <!--background color: black;
@@ -127,7 +190,8 @@
             <button>Contact Us</button> <!--Open Sans, Regular, 16px, #ffffff, border-radius-->
         </div>
     </section>
-    <!--================= Example 2 =======================-->
+
+    <!--================= Testimonials =======================-->
     <section class="testimonials"><!-- background: #f3f3f3 -->
         <div class="content">
             <h3>Testimonials</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
@@ -136,31 +200,54 @@
 
             <!-- slider -->
             <div><!-- background: #ffffff -->
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                    provident, similique sunt in culpa qui officia deserunt mollitia.
-                </p> <!--Open Sans, Regular, 16px, #81868e-->
-                <p>PARTHO</p> <!--Open Sans, Bold, 16px, #19bd9a-->
-                <p>FOUNDER, ARTWAYS BD</p> <!--Open Sans, Regular, 14px, #464646-->
+                <div>
+                    <img src="img/testimonials_photo.png">
+                </div>
+                <div>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                        provident, similique sunt in culpa qui officia deserunt mollitia.
+                    </p> <!--Open Sans, Regular, 16px, #81868e-->
+                    <p>PARTHO</p> <!--Open Sans, Bold, 16px, #19bd9a-->
+                    <p>FOUNDER, ARTWAYS BD</p> <!--Open Sans, Regular, 14px, #464646-->
+                </div>
             </div>
 
 
         </div>
     </section>
-    <!--================= Testimonials =======================-->
-    <section id="contact_us" class="contact_us"><!-- background: #ffffff -->
+    <!--================= Contact us + Google map =======================-->
+    <section id="contact_us" class="contact_us">
         <div class="content">
-            <h3>Contact Us</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p> <!--Open Sans, Regular, 14px, #81868e-->
-
+            <h3>Contact Us</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
         </div>
+
         <div id="map"></div>
     </section>
-    <!--================= Footer =======================-->
-    <footer><!-- background: #ffffff -->
-        <div class="social_icons">
 
-            <p>Copyright 2015. All rights Reserved</p> <!--Open Sans regular 14px #81868e-->
+    <!--================= Footer with social media =======================-->
+    <footer>
+        <div>
+            <!-- logo -->
+            <p>Copyright 2015. All rights Reserved</p>
+            <div class="social_icons">
+                <a href="https://www.facebook.com/">
+                    <img src="img/social_facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.twitter.com/">
+                    <img src="img/social_twitter.png" alt="twitter">
+                </a>
+                <a href="https://www.linkedin.com/">
+                    <img src="img/social_linkedin.png" alt="linkedin">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="img/social_instagram.png" alt="instagram">
+                </a>
+                <a href="https://www.vimeo.com/">
+                    <img src="img/social_vimeo.png" alt="vimeo">
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -168,27 +255,27 @@
     <!--============================================ END OF MARKUP CODE ============================================= -->
 
 
-    <!-- =============== подключение jQuery =============== -->
+    <!-- =============== adding jQuery =============== -->
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">
     </script>
 
-    <!-- =============== подключение GOOGLE MAPS  =============== -->
+    <!-- =============== adding GOOGLE MAPS  =============== -->
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg_zfQHUtP70DQa3CUL293ZVK-BxoDv8Y&callback=initMap">
     </script>
 
 
-    <!--подключаем slick slider, добавив https: т.к. иначе Chrome ругается-->
+    <!-- =============== adding slick slider =============== -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
-    <!--подключаем isotope, чтоб использовать его для фильтрации изображений по параметрам -->
+    <!-- =============== adding isotope =============== -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-    <!-- =============== подключение своего файла со скриптами =============== -->
+    <!-- =============== adding custom js file =============== -->
     <script src="js/script.js"></script>
 </body>
 </html>
