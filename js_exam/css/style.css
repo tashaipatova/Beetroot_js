@@ -1,0 +1,462 @@
+
+/*font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Open Sans', sans-serif;*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    /*min-height: 100%;*/
+    /*height: 100%;*/
+    background-color: #fff;
+}
+
+body{
+    /*border: 15px solid #fff;*/
+    color: #fff;
+}
+
+/*changing default styles for links*/
+a{
+    text-decoration:none;
+    color: #fff;
+}
+button{
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 140px;
+    height: 35px;
+    margin: 30px 0;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*h3{
+    font-family: "Aleo-Regular", Arial, sans-serif;
+    text-transform: capitalize;
+}*/
+
+.content{
+    width: 90%;
+    max-width: 1110px;
+    height: 100%;
+    margin: 0 auto;
+}
+.clearfix:after {
+    content:'';
+    /*display:table;*/
+    clear:both;
+}
+
+/*================= Start page =======================*/
+
+.start_page{
+    height: 100vh;
+    min-height: 800px;
+    background-image: url("../img/bg_start.jpg");
+    text-align: center;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.main{
+    height: 90%;
+    padding-top: 15%;
+}
+
+.start_page h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    /*font-size: 48px;*/
+}
+
+.start_page h3{
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    /*font-size: 22px;*/
+}
+
+.start_page .search_bar{
+    max-width: 650px;
+    height: 60px;
+    margin: 50px auto;
+    border: 2px solid #fff;
+    font-size: 0;
+}
+.start_page .search_bar input{
+    display: inline-block;
+    vertical-align: top;
+    width:80%;
+    border: none;
+    text-transform: capitalize;
+    line-height: 56px;
+    font-size: 14px;
+    text-align: center;
+    color: #999999;
+ }
+
+.start_page .search_bar button{
+    margin: 0;
+    display: inline-block;
+    width:20%;
+    max-width:146px;
+    font-size: 14px;
+    background: #5474fd;
+    height: 56px;
+}
+
+
+    /*scroll button*/
+.arrow_down {
+    margin-top: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+}
+
+.scroll{
+    letter-spacing: 0.1em;
+    padding: 70px;
+}
+
+/*================= Menu below the Start page =======================*/
+.bottom_menu{
+    height: 80px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-family: "Aleo-Regular", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    background-color: #5474fd;
+    color: #fff;
+    line-height: 80px;
+}
+.bottom_menu .logo{
+    display:inline-block;
+    float: left;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 24px;
+}
+
+.bottom_menu ul{
+    float:right;
+}
+
+.bottom_menu ul li{
+    display:inline-block;
+    margin-right:35px;
+}
+
+.bottom_menu ul li:last-child{
+    margin-right:0
+}
+
+/*================= Why choose us =======================*/
+.why_choose_us{
+    /*display: table;*/
+    height: 100vh;
+    min-height: 680px;
+    background: url("../img/bg_why_choose_us.jpg") no-repeat;
+    color: #fff;
+}
+
+.why_choose_text{
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.why_choose_text h2{
+    line-height: 120px;
+    font-family: "Aleo-Regular", Arial, sans-serif;
+    font-weight: 300;
+}
+
+.why_choose_text p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 26px;
+    color: #e8e8e8;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.why_choose_images{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.why_choose_images .top_image{
+    padding-left: 65px;
+    float: left;
+}
+
+.why_choose_images .bottom_image{
+    float: right;
+}
+
+.why_choose_images img{
+/*    max-width: 350px;
+    max-height: 220px;*/
+}
+
+/*================= How it works =======================*/
+.how_it_works{
+    height: 50vh;
+    min-height: 340px;
+    padding-top: 30px;
+    background-color: #333333;
+    text-transform: capitalize;
+    /*text-align: center;*/
+}
+
+.how_it_works h3{
+    font-family: "Aleo-Regular", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: #e8e8e8;
+}
+
+.how_it_works .icon{
+    width: 96px;
+    height: 96px;
+    border-radius: 48px;
+    margin: 0 auto;
+    background-color: #333333;
+}
+
+
+.align_center{
+    width: 100%;
+/*    display: inline-block;*/
+    text-align: center;
+/*    margin: 0 auto;*/
+}
+
+/*дуга*/
+.arc_wrapper{
+    margin: 0 auto;
+    width: 66%;
+}
+
+.arc_wrapper img{
+    max-width: 100%;
+    vertical-align: center;
+    opacity: 0.5;
+}
+
+/*.arc{
+    display: inline-block;
+    border: 1px dotted #fff;
+    opacity: 0.5;
+
+    min-width: 100%;
+    min-height: 200%;
+    border-radius: 50%;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}*/
+
+/*width: 777px;
+height: 95px;
+background-color: #cbcbcb;
+border: 1px dotted #ffffff;
+
+*/
+
+
+
+/*================= Example 1 =======================*/
+.example1{
+    min-height: 700px;
+    height: 100vh;
+    background: url("../img/bg_example1.jpg") no-repeat;
+    /*text-align: center;*/
+}
+
+.place_description{
+    padding: 30px;
+    margin-top: 20%;
+    margin-bottom: 100px;
+    width: 50%; /*(540x370)*/
+    /*max-width: 370px;*/
+    background-color:rgba(35,35,35,0.9);
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 300;
+}
+
+.float_left{
+    float: left;
+}
+
+.float_right{
+    float: right;
+}
+
+.place_description .country{
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #e8e8e8;
+}
+
+.place_description .place{
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+}
+
+.place_description .description{
+    padding: 15px 0;
+    font-size: 16px;
+    color: #e8e8e8;
+}
+
+    /*================= Example 2 =======================*/
+.example2{
+    min-height: 700px;
+    height: 100vh;
+    background: url("../img/bg_example2.jpg") no-repeat;
+    /*text-align: center;*/
+}
+
+/*================= Testimonials =======================*/
+.testimonials{
+    height: 100vh;
+    min-height: 730px;
+    background: url("../img/bg_testimonials.jpg") no-repeat;
+}
+
+.testimonials h3{
+    padding: 120px 0 100px 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 36px;
+    font-family: "Aleo-Regular", Arial, sans-serif;
+    font-weight: 300;
+}
+
+.testimonial_area{
+    display: table;
+    font-size: 0;
+    max-height: 33%;
+    background-color: #333333;
+}
+
+.testimonial_img{
+    display: table-cell;
+    vertical-align: middle;
+    width: 35%;
+}
+
+.testimonial_img img{
+    max-width: 100%;
+}
+
+.testimonial_text{
+    width: 65%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 40px;
+
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.user_name{
+    text-transform: uppercase;
+    color: #fefefe;
+    font-size: 20px;
+}
+
+blockquote{
+    color: #e8e8e8;
+    font-size: 16px;
+}
+
+/*style for quotation mark*/
+blockquote i{
+    font-size: 36px;
+    color: #5474fd;
+}
+
+/*I really wanted to add the quotation mark via Font Awesome & ':before' but it seems that Font Awesome has some
+problems with working during last several days*/
+/*blockquote:before{
+    font-family: "Font Awesome";
+    content: '\f10d';
+    color: #5474fd;
+    font-size: 36px;
+}*/
+
+/*================= Footer =======================*/
+
+footer{
+    height: 50vh;
+    min-height: 270px;
+   /* background-color: #232323;*/
+    text-align: center;
+}
+
+footer .logo{
+    padding-top: 10%;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+footer p{
+    text-transform: capitalize;
+    line-height: 32px;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.social_icons a{
+    margin-bottom: 50px;
+    line-height: 26px;
+    color: #e8e8e8;
+    font-size: 16px;
+}
+
+footer a:hover{
+    color: #5474fd;
+}
+
+.social_icons ul li{
+
+    display:inline-block;
+    margin-right: 20px;
+}
+
+.social_icons ul li:last-child {
+    margin-right: 0
+}
+
+
+/* =============================================== GOOGLE MAP ================================================= */
+#map {
+    height: 400px;
+    border: 1px solid black;
+}
