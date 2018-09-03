@@ -1,25 +1,14 @@
-
-/*font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Open Sans', sans-serif;*/
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body{
-    /*min-height: 100%;*/
-    /*height: 100%;*/
-    background-color: #fff;
-    text-align: center;
-}
-
 body{
-    /*border: 15px solid #fff;*/
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    /*color: #fff;*/
+    background-color: #fff;
+    text-align: center;
 }
 
 /*changing default styles for links*/
@@ -28,84 +17,105 @@ a{
     color: #fff;
 }
 
-
-h1, h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #333b46;
-    text-transform: uppercase;
-}
-
 .content{
-    width: 100%;
-    max-width: 1400px;
-    height: 100%;
     margin: 0 auto;
+    width: 100%;
+    max-width: 1268px;
+    /*height: 100%;*/
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
-.clearfix:after {
-    content:'';
-    /*display:table;*/
-    clear:both;
+
+/*размеры блока с названием и кратким описанием каждой секции*/
+.section_title {
+    margin: 0 auto 60px;
+    max-width: 480px;
+}
+/*название каждой секции*/
+.section_title h3{
+    text-transform: uppercase;
+    line-height: 60px;
+    letter-spacing: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #333b46;
+}
+/*описание каждой секции под заголовком*/
+.section_title p{
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #81868e;
 }
 
 
 /*================= Menu above the Start page =======================*/
 .header_menu{
-    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 5%;
+    /*height: 40px;*/
     vertical-align: middle;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #fff;
-    line-height: 80px;
-}
-.header_menu .logo{
-    display:inline-block;
-    float: left;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    font-size: 24px;
+    line-height: 40px;
 }
 
-.header_menu ul{
+
+/*.header_menu ul{
     float:right;
-}
+}*/
 
 .header_menu ul li{
-    display:inline-block;
-    margin-right:35px;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .header_menu ul li:last-child{
-    margin-right:0
+    margin-right: 0;
+}
+
+.header_menu ul li a{
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.header_menu ul li a.active,
+.header_menu ul li a:hover{
+    border: 1px solid white;
 }
 
 /*================= Start page =======================*/
 
 .intro_page{
-    width: 100%;
+/*    width: 100%;
     position: relative;
     height: 100%;
-    min-height: 800px;
-    background-color: black;
+    min-height: 800px;*/
     color: #fff;
-}
-
-.intro_page img{
-    width: 100%;
+    background-color: #f3f3f3;
 }
 
 .main{
-    position: absolute; /* Position the background text */
-    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1; /* Grey text */
-    padding: 20px; /* Some padding */
+    /*height: 100vh;*/
+    height: 100%;
+    max-width: 1360px;
+    background: url("../img/bg_start_dark.jpg");
+    background-size: cover;
 }
 
 .intro_page .slogan{
     display: inline-block;
+    margin: 215px auto;
     max-width: 640px;
     color: #ffffff;
 }
@@ -116,7 +126,6 @@ h1, h3 {
     font-weight: 300;
     font-size: 35px;
     letter-spacing: 0.2em;
-    color: #fff;
 }
 
 .intro_page .slogan h2{
@@ -124,74 +133,81 @@ h1, h3 {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 
+/*scroll arrow button*/
+.scroll{
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #19bd9a;
+}
 
-    /*scroll button*/
 .arrow_down {
-    margin-top: 10px;
+    margin-top: 8px;
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 1px 1px 0;
     display: inline-block;
     padding: 5px;
     transform: rotate(45deg);
 }
 
-.scroll{
-    letter-spacing: 0.1em;
-    padding: 70px;
-}
-
-
 
 /* ================= portfolio ======================= */
 .portfolio {
+    background-color: #f3f3f3;
+    margin: 0 auto;
+}
 
+.portfolio_isotope {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #464646;
+
+}
+
+.portfolio .button-group {
+    padding-bottom: 60px;
 }
 
 .portfolio .button {
     display: inline-block;
     padding: 0.5em 1.0em;
-    /*    background: #EEE;*/
-    border: none;
-    /*border-radius: 7px;*/
-    /*background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );*/
-    color: #222;
-    font-family: sans-serif;
-    font-size: 16px;
-    text-shadow: 0 1px white;
+    border-style: none;
     cursor: pointer;
+    /*border-bottom: 2px solid black;*/
 
     text-decoration: none;
     background: transparent;
 }
 
 /*hover effect on filter buttons*/
-.portfolio .button:hover {
-    background-color: #19bd9a;
-    text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
-}
-
 .portfolio .button:active,
-.portfolio .button.is-checked {
-    background-color: #19bd9a;
+.portfolio .button.is-checked,
+.portfolio .button:hover {
+    border-bottom: 2px solid #19bd9a;
 }
 
-.portfolio .button.is-checked {
-    color: white;
-    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
-}
+/*another way to create underlining*/
+/*.portfolio .button:after {
+    content: ""; !* This is necessary for the pseudo element to work. *!
+    display: block; !* This will put the pseudo element on its own line. *!
+    margin: 0 auto; !* This will center the border. *!
+    width: 50%; !* Change this to whatever width you want. *!
+    padding-top: 10px; !* This creates some space between the element and the border. *!
+    border-bottom: 2px solid #19bd9a; !* This creates the border. Replace black with whatever color you want. *!
+}*/
 
-.portfolio .button:active {
-    box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
-}
 
 /* ---- isotope ---- */
 
 .portfolio .grid {
-    width: 80%;
+    /*width: 100%;*/
     margin: 0 auto;
 }
 
@@ -207,10 +223,15 @@ h1, h3 {
 .portfolio .element-item {
     position: relative;
     float: left;
-    width: 20%;
-    margin: 5px;
-    background: #fff;
-    color: #262524;
+    /*width: 20%;*/
+    /*margin: 5px;*/
+    width: 25%;
+    max-width: 280px;
+
+
+
+    border: 3px solid #f3f3f3;
+    border-collapse: collapse;
 }
 
 .portfolio .element-item > * {
@@ -219,7 +240,7 @@ h1, h3 {
 }
 
 .portfolio .element-item img {
-    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -227,69 +248,192 @@ h1, h3 {
 
 /* ================= Team ======================= */
 .team {
-
 }
 
+.team .slick_team {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team .user_photo{
+    max-width: 30%;
+}
+
+/*.team .user_photo .photo_cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+}
+
+.team .user_photo .photo_cover:hover {
+    opacity: 1;
+}*/
+
 .team .team_description {
+    padding-top: 25px;
+    /*margin-bottom: 40px;*/
+    padding-right: 45px;
+    /*margin-left: 300px;*/
+    overflow: auto;
+    width: 45%;
     display: inline-block;
     text-align: right;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #81868e;
+    letter-spacing: 2px;
+}
+
+    /*флекс для контента внутри каждого слайда*/
+.team .slide {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .team_description .user_name {
     font-size: 20px;
+    line-height: 30px;
     color: #464646;
 }
 
 .team_description .user_position{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
-    font-size: 14px;
     text-transform: uppercase;
+    font-style: italic;
 }
 
 .team_description .user_description {
-    /*font-size: 14px;*/
+    margin-top: 40px;
+    margin-bottom: 40px;
+    line-height: 24px;
+    letter-spacing: 1px;
 }
 
 
 /*================= Contact us button below the Team section =======================*/
 .team_contact{
     height: 200px;
-    background: url("../img/bg_team_contact.jpg") no-repeat;
-    filter: grayscale(100%);
+    /*background: #000000 url("../img/bg_team_contact_dark.jpg") no-repeat;*/
+
+    background-color: #000000;
+    /*filter: grayscale(100%);*/
+}
+
+.team_contact .cover{
+    height: 100%;
+    background: url("../img/bg_team_contact_dark.jpg") no-repeat;
+    max-width: 1365px;
+    margin: 0 auto;
+}
+
+.team_contact .lets_talk {
+    display: inline-block;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    vertical-align: middle;
+    letter-spacing: 1px;
 }
 
 .team_contact p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    margin-bottom: 25px;
     font-size: 20px;
-    color: #fff;
 }
 
-.team_contact button{
+.team_contact a{
     text-decoration: none;
     border: 1px solid white;
     border-radius: 20px;
     background: transparent;
     width: 140px;
     height: 35px;
-    margin: 30px 0;
+    padding: 5px 20px;
+    line-height: 42px;
     text-transform: capitalize;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+
     font-size: 16px;
     color: #fff;
+    cursor: pointer;
+}
+
+.team_contact a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*================= Testimonials =======================*/
 .testimonials{
-
+    background-color: #f3f3f3;
 }
 
+.testimonials .slick_team {
+    background-color: #ffffff;
+    /*width: 90%;*/
+    padding: 50px 100px 60px;
+}
+
+/*resizing and making photos round & grayscale*/
+.testimonials .photo-round {
+    width: 130px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.testimonials .testimonial_text {
+    margin-left: 65px;
+    margin-bottom: 45px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.testimonials .testimonial_text .main_text {
+    margin-bottom: 25px;
+    color: #81868e;
+    line-height: 28px;
+}
+
+.testimonials .testimonial_text .user_name {
+    text-transform: uppercase;
+    line-height: 24px;
+    font-weight: 700;
+    color: #19bd9a;
+}
+
+.testimonials .testimonial_text .user_position {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #464646;
+}
+
+
+/*флекс для контента внутри каждого слайда*/
+.testimonials .slide {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 
 /*================= Contact us + Google map =======================*/
@@ -297,22 +441,12 @@ h1, h3 {
     background-color: #ffffff;
 }
 
-.contact_us h3{
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: #333b46;
-}
-
-.contact_us p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #81868e;
+.contact_us .section_title {
+    margin-top: 80px;
 }
 
 #map {
+    margin: 70px 0;
     height: 440px;
     border: 1px solid black;
 }
@@ -326,6 +460,8 @@ footer{
 }
 
 footer p{
+    margin-top: 21px;
+    margin-bottom: 35px;
     line-height: 32px;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -333,33 +469,76 @@ footer p{
     color: #81868e;
 }
 
-/*
-footer .logo{
-    padding-top: 10%;
-    text-transform: uppercase;
-    font-family: "Josefin Sans", Arial, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
+.social_icons a img{
+    border: 1px solid transparent;
+    border-radius: 50%;
 }
 
-.social_icons a{
-    margin-bottom: 50px;
-    line-height: 26px;
-    color: #e8e8e8;
-    font-size: 16px;
+.social_icons img:hover {
+    border: 1px solid #313945;
 }
 
-footer a:hover{
-    color: #5474fd;
+
+/*============================ Customized dots for Slick Slider ===============================*/
+.my-dots {
+    /*position: absolute;
+    bottom: -45px;*/
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
 }
 
-.social_icons ul li{
-
-    display:inline-block;
-    margin-right: 20px;
+.my-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+    padding: 0;
+    cursor: pointer;
 }
 
-.social_icons ul li:last-child {
-    margin-right: 0
-}*/
+.my-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
 
+.my-dots li button:hover,
+.my-dots li button:focus {
+    outline: none;
+}
+
+.my-dots li button:hover:before,
+.my-dots li button:focus:before {
+    opacity: 1;
+}
+
+.my-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: url('../img/dot_empty.svg');
+    text-align: center;
+    opacity: 0.25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.my-dots li.slick-active button:before {
+    content: url('../img/dot_full.svg');
+    opacity: 1;
+}

@@ -17,39 +17,16 @@ $(document).ready(function () {
 
 
     /*====================== ПОДКЛЮЧЕНИЕ SLICK SLIDER =====================*/
-    $('.slick_team').slick();
-    /*$('.container').slick({
-
-
-
-        /!*prevArrow:'<img class="prev" src="img/back_arrow.png">',
-        nextArrow:'<img class="next" src="img/forward_arrow.png">',*!/
-
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
-
-    });*/
+    $('.slick_team').slick({
+        autoplay: true,
+        dots: true,
+        dotsClass: "my-dots",
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
     /*====================== END OF SLICK SLIDER =====================*/
 
 
@@ -57,45 +34,18 @@ $(document).ready(function () {
     // init Isotope
     var $grid = $('.grid').isotope({
         itemSelector: '.element-item',
-        layoutMode: 'fitRows',
-        getSortData: {
-            name: '.name',
-            symbol: '.symbol',
-            number: '.number parseInt',
-            category: '[data-category]',
-            weight: function( itemElem ) {
-                var weight = $( itemElem ).find('.weight').text();
-                return parseFloat( weight.replace( /[\(\)]/g, '') );
-            }
+        /*layoutMode: 'fitRows',*/
+        layoutMode: 'masonry',
+        masonry: {
+            columnWidth: 300
         }
     });
 
-// filter functions
-    var filterFns = {
-        // show if number is greater than 50
-        numberGreaterThan50: function() {
-            var number = $(this).find('.number').text();
-            return parseInt( number, 10 ) > 50;
-        },
-        // show if name ends with -ium
-        ium: function() {
-            var name = $(this).find('.name').text();
-            return name.match( /ium$/ );
-        }
-    };
 
 // bind filter button click
     $('#filters').on( 'click', 'button', function() {
         var filterValue = $( this ).attr('data-filter');
-        // use filterFn if matches value
-        filterValue = filterFns[ filterValue ] || filterValue;
         $grid.isotope({ filter: filterValue });
-    });
-
-// bind sort button click
-    $('#sorts').on( 'click', 'button', function() {
-        var sortByValue = $(this).attr('data-sort-by');
-        $grid.isotope({ sortBy: sortByValue });
     });
 
 // change is-checked class on buttons
@@ -114,8 +64,8 @@ $(document).ready(function () {
 
 
 /* =========================================== GOOGLE MAPS =========================================== */
-    var coordLat = 49.568583,
-        coordLng = 34.585416;
+var coordLat = 49.568583,
+    coordLng = 34.585416;
 // Initialize and add the map
 function initMap() {
     // The location of requiredPlacement
@@ -123,8 +73,7 @@ function initMap() {
     var requiredPlacement = {lat: coordLat, lng: coordLng};
     // The map, centered at requiredPlacement
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 10, center: requiredPlacement});
+        document.getElementById('map'), {zoom: 15, disableDefaultUI: true, center: requiredPlacement});
     // The marker, positioned at requiredPlacement
-    var marker = new google.maps.Marker({position: requiredPlacement, map: map});
-    disableDefaultUI: true
+    var marker = new google.maps.Marker({position: requiredPlacement, map: map, icon: 'img/favicon.png'});
 }

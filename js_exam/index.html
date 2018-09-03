@@ -19,29 +19,35 @@
 <body>
     <!--================= Start page =======================-->
     <section class="intro_page">
-        <img src="img/bg_start.jpg"">
+        <!--<img src="img/bg_start.jpg">-->
         <div class="content main">
 
             <!--================= Menu above the Start page =======================-->
             <nav class="header_menu">
-                    <h3 class="logo">Bouncy</h3>
-                    <ul><!--Open Sans, Regular, 16px, #ffffff-->
-                        <li><a href="#">Hello</a></li>
+                    <div class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 19" width="113" height="19">
+                            <style>
+                                tspan { white-space:pre }
+                                .shp0 { fill: #ffffff }
+                            </style>
+                            <path id="Bouncy" class="shp0" d="M5.82 14.95L5.82 11.7L9.12 11.7C9.97 11.7 10.75 12.43 10.75 13.33C10.75 14.23 10.02 14.95 9.12 14.95L5.82 14.95ZM5.82 7.58L5.82 4.33L8.2 4.33C9.1 4.33 9.82 5.05 9.82 5.95C9.82 6.85 9.1 7.58 8.2 7.58L5.82 7.58ZM10.15 19C13.12 19 15.65 16.48 15.65 13.5C15.65 11.8 14.8 10.23 13.52 9.2C14.25 8.28 14.72 7.1 14.72 5.83C14.72 2.83 12.17 0.25 9.17 0.25L0.9 0.25L0.9 19L10.15 19ZM18.22 9.65C18.22 14.83 22.4 19 27.57 19C32.75 19 36.94 14.83 36.94 9.65C36.94 4.48 32.75 0.25 27.57 0.25C22.4 0.25 18.22 4.48 18.22 9.65ZM32.05 9.63C32.05 12.08 30.05 14.1 27.57 14.1C25.12 14.1 23.12 12.08 23.12 9.63C23.12 7.15 25.12 5.15 27.57 5.15C30.05 5.15 32.05 7.15 32.05 9.63ZM44.8 0.25L39.85 0.25L39.85 11.6C39.85 15.73 43.12 19 47.25 19C51.32 19 54.65 15.73 54.65 11.6L54.65 0.25L49.7 0.25L49.7 11.53C49.7 12.88 48.6 13.98 47.25 13.98C45.9 13.98 44.8 12.88 44.8 11.53L44.8 0.25ZM74.2 19L74.2 0.25L69.27 0.25L69.27 9.1L60.4 0.25L58.4 0.25L58.4 19L63.32 19L63.32 10.13L72.17 19L74.2 19ZM92.25 2.98C90.55 1.28 88.22 0.25 85.65 0.25C80.47 0.25 76.27 4.45 76.27 9.63C76.27 14.8 80.47 19 85.65 19C88.25 19 90.6 17.93 92.3 16.23L88.8 12.78C88.02 13.58 86.92 14.03 85.65 14.03C83.1 14.03 81.25 12.18 81.25 9.63C81.25 7.08 83.1 5.23 85.65 5.23C86.92 5.23 88.02 5.68 88.8 6.45L92.25 2.98ZM112.72 0.25L107.05 0.25L103.42 6.5L99.82 0.25L94.15 0.25L101 12.1L101 19L105.87 19L105.87 12.1L112.72 0.25Z" />
+                        </svg>
+                    </div>
+                    <ul>
+                        <li><a href="#" class="active">Hello</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact_us">Contact</a></li>
                     </ul>
             </nav>
 
-            <!--================= Start page main content =======================-->
-            <!--bg main opacity 50% -->
+            <!--================= Start page slogan =======================-->
             <div class="slogan">
-                <h1>We Are Code Cafe</h1> <!-- Source Sans Pro, Light, 35px, uppercase, #ffffff-->
-                <!--Open Sans, Regular, 16px, #ffffff-->
+                <h1>We Are Code Cafe</h1>
                 <h2>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h2>
             </div>
 
-
+            <!--================= scroll arrow =======================-->
             <div class="scroll">
                  <a href="#portfolio">
                     <i class="arrow_down"></i>
@@ -52,17 +58,18 @@
 
 
     <!-- ================= portfolio ======================= -->
-    <section id="portfolio" class="portfolio"> <!-- background: #f3f3f3 -->
+    <section id="portfolio" class="portfolio">
         <div class="content">
-            <h3>THE PORTFOLIO</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-            <!--Open Sans, Regular, 14px, #81868e-->
+            <div class="section_title">
+                <h3>The Portfolio</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            </div>
 
 
-            <div>
-                <!-- Open Sans, Regular, 16px, #464646,
-                hover - underline, width: 38px; height: 1px; #19bd9a-->
-                <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">All Works</button>
+            <div class="portfolio_isotope">
+                <!-- hover - underline, width: 38px; height: 1px; #19bd9a-->
+                <div id="filters" class="button-group">
+                    <button class="button is-checked" data-filter="*">All Works</button>
                     <button class="button" data-filter=".portfolio_print">Print</button>
                     <button class="button" data-filter=".portfolio_branding">Branding</button>
                     <button class="button" data-filter=".portfolio_web">Web</button>
@@ -113,67 +120,74 @@
     </section>
 
     <!-- ================= Team ======================= -->
-    <section id="team" class="team"> <!-- background: #ffffff -->
+    <section id="team" class="team">
         <div class="content">
-            <h3>THE TEAM</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-            <!--Open Sans, Regular, 14px, #81868e-->
+
+            <div class="section_title">
+                <h3>The Team</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            </div>
+
 
             <!-- slider -->
             <div class="slick_team">
-                <section class="container">
-                    <div class="slide">
+                <div class="slide">
+                    <div class="user_photo">
                         <img src="img/team_abdullah.jpg"  alt="slide" />
-                        <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
+                        <div class="photo_cover"><!-- hover on photo -->
                             <div class="social_icons">
-                            </div>
-                        </div>
-                        <div class="team_description">
-                            <p class="user_name">Abdullah Noman</p>
-                            <p class="user_position">Creative Director, Code Cafe</p>
-                            <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
-                                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
-                                iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
-                                dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
-                                ducimus qui blanditiis praesentium.
-                            </p>
                         </div>
                     </div>
-                    <div class="slide">
-                        <img src="img/team_abdullah.jpg"  alt="slide" />
-                        <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
-                            <div class="social_icons">
-                            </div>
-                        </div>
-                        <div class="team_description">
-                            <p class="user_name">Abdullah Noman</p>
-                            <p class="user_position">Creative Director, Code Cafe</p>
-                            <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
-                                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
-                                iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
-                                dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
-                                ducimus qui blanditiis praesentium.
-                            </p>
+                    </div>
+
+                    <div class="team_description">
+                        <p class="user_name">Abdullah Noman</p>
+                        <p class="user_position">Creative Director, Code Cafe</p>
+                        <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/team_girl.jpg"  alt="slide" />
+                    <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
+                        <div class="social_icons">
                         </div>
                     </div>
-                    <div class="slide">
-                        <img src="img/team_abdullah.jpg"  alt="slide" />
-                        <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
-                            <div class="social_icons">
-                            </div>
-                        </div>
-                        <div class="team_description">
-                            <p class="user_name">Abdullah Noman</p>
-                            <p class="user_position">Creative Director, Code Cafe</p>
-                            <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et
-                                accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et
-                                iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
-                                dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos
-                                ducimus qui blanditiis praesentium.
-                            </p>
+                    <div class="team_description">
+                        <p class="user_name">Random Girl</p>
+                        <p class="user_position">Designer, Code Cafe</p>
+                        <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/team_oldman.jpg"  alt="slide" />
+                    <div class="hover"><!-- hover on photo: white overlay, opacity 75% -->
+                        <div class="social_icons">
                         </div>
                     </div>
-                </section>
+                    <div class="team_description">
+                        <p class="user_name">Big Boss</p>
+                        <p class="user_position">CEO, Code Cafe</p>
+                        <p class="user_description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium.
+                        </p>
+                    </div>
+                </div>
             </div>
 
 
@@ -183,33 +197,60 @@
 
     <!--================= Contact us button below the Team section =======================-->
     <section class="team_contact">
-        <div class="content">
-            <!--background color: black;
-            background image opacity 15%, monochrom-->
-            <p>Already Loved Us? Let’s talk!</p><!--Open Sans, Regular, 20px, #ffffff-->
-            <button>Contact Us</button> <!--Open Sans, Regular, 16px, #ffffff, border-radius-->
+        <div class="cover">
+            <div class="lets_talk">
+                <p>Already Loved Us? Let’s talk!</p>
+                <a href="#contact_us">Contact Us</a>
+            </div>
         </div>
     </section>
 
     <!--================= Testimonials =======================-->
-    <section class="testimonials"><!-- background: #f3f3f3 -->
+    <section class="testimonials">
         <div class="content">
-            <h3>Testimonials</h3> <!--Source Sans Pro, Light, 20px, uppercase, #333b46-->
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-            <!--Open Sans, Regular, 14px, #81868e-->
+
+            <div class="section_title">
+                <h3>Testimonials</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            </div>
 
             <!-- slider -->
-            <div><!-- background: #ffffff -->
-                <div>
-                    <img src="img/testimonials_photo.png">
+            <div class="slick_team">
+                <div class="slide">
+                    <img class="photo-round" src="img/testimonials_photo1.png">
+                    <div class="testimonial_text">
+                        <p class="main_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                            sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                            mollitia.
+                        </p>
+                        <p class="user_name">PARTHO</p>
+                        <p class="user_position">FOUNDER, ARTWAYS BD</p>
+                    </div>
                 </div>
-                <div>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                        provident, similique sunt in culpa qui officia deserunt mollitia.
-                    </p> <!--Open Sans, Regular, 16px, #81868e-->
-                    <p>PARTHO</p> <!--Open Sans, Bold, 16px, #19bd9a-->
-                    <p>FOUNDER, ARTWAYS BD</p> <!--Open Sans, Regular, 14px, #464646-->
+                <div class="slide">
+                    <img class="photo-round" src="img/testimonials_photo5.jpg">
+                    <div class="testimonial_text">
+                        <p class="main_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                            sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                            mollitia.
+                        </p>
+                        <p class="user_name">Page Laubheimer</p>
+                        <p class="user_position">User Experience Specialist, Nielsen Norman Group</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="photo-round" src="img/testimonials_photo4.jpg">
+                    <div class="testimonial_text">
+                        <p class="main_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                            sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                            mollitia.
+                        </p>
+                        <p class="user_name">John Doe</p>
+                        <p class="user_position">Repurposer</p>
+                    </div>
                 </div>
             </div>
 
@@ -218,18 +259,26 @@
     </section>
     <!--================= Contact us + Google map =======================-->
     <section id="contact_us" class="contact_us">
-        <div class="content">
-            <h3>Contact Us</h3>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
-        </div>
-
+             <div class="section_title">
+                <h3>Contact Us</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+            </div>
         <div id="map"></div>
     </section>
 
     <!--================= Footer with social media =======================-->
     <footer>
         <div>
-            <!-- logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 19" width="113" height="19">
+                <defs>
+                    <filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.196   0 0 0 0 0.227   0 0 0 0 0.271   0 0 0 1 0" /> </filter>
+                </defs>
+                <style>
+                    tspan { white-space:pre }
+                    .shp1 { filter: url(#flt1);fill: #313945 }
+                </style>
+                <path id="Bouncy_dark" class="shp1" d="M5.82 14.95L5.82 11.7L9.12 11.7C9.97 11.7 10.75 12.43 10.75 13.33C10.75 14.23 10.02 14.95 9.12 14.95L5.82 14.95ZM5.82 7.58L5.82 4.33L8.2 4.33C9.1 4.33 9.82 5.05 9.82 5.95C9.82 6.85 9.1 7.58 8.2 7.58L5.82 7.58ZM10.15 19C13.12 19 15.65 16.48 15.65 13.5C15.65 11.8 14.8 10.23 13.52 9.2C14.25 8.28 14.72 7.1 14.72 5.83C14.72 2.83 12.17 0.25 9.17 0.25L0.9 0.25L0.9 19L10.15 19ZM18.22 9.65C18.22 14.83 22.4 19 27.57 19C32.75 19 36.94 14.83 36.94 9.65C36.94 4.48 32.75 0.25 27.57 0.25C22.4 0.25 18.22 4.48 18.22 9.65ZM32.05 9.63C32.05 12.08 30.05 14.1 27.57 14.1C25.12 14.1 23.12 12.08 23.12 9.63C23.12 7.15 25.12 5.15 27.57 5.15C30.05 5.15 32.05 7.15 32.05 9.63ZM44.8 0.25L39.85 0.25L39.85 11.6C39.85 15.73 43.12 19 47.25 19C51.32 19 54.65 15.73 54.65 11.6L54.65 0.25L49.7 0.25L49.7 11.53C49.7 12.88 48.6 13.98 47.25 13.98C45.9 13.98 44.8 12.88 44.8 11.53L44.8 0.25ZM74.2 19L74.2 0.25L69.27 0.25L69.27 9.1L60.4 0.25L58.4 0.25L58.4 19L63.32 19L63.32 10.13L72.17 19L74.2 19ZM92.25 2.98C90.55 1.28 88.22 0.25 85.65 0.25C80.47 0.25 76.27 4.45 76.27 9.63C76.27 14.8 80.47 19 85.65 19C88.25 19 90.6 17.93 92.3 16.23L88.8 12.78C88.02 13.58 86.92 14.03 85.65 14.03C83.1 14.03 81.25 12.18 81.25 9.63C81.25 7.08 83.1 5.23 85.65 5.23C86.92 5.23 88.02 5.68 88.8 6.45L92.25 2.98ZM112.72 0.25L107.05 0.25L103.42 6.5L99.82 0.25L94.15 0.25L101 12.1L101 19L105.87 19L105.87 12.1L112.72 0.25Z" />
+            </svg>
             <p>Copyright 2015. All rights Reserved</p>
             <div class="social_icons">
                 <a href="https://www.facebook.com/">
