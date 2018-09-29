@@ -1,0 +1,517 @@
+*{
+    /*used for menu section*/
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    margin: 0;
+}
+
+/*removing gutters in bootstrap*/
+.row.no-gutter{
+    padding: 0;
+    margin: 0;
+}
+
+.row.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+/*main content wrapper*/
+.content_wrapper {
+    width: 90%;
+    height: 100%;
+    max-width: 1490px;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    font-family: Merriweather, sans-serif;
+    font-weight: 300;
+    color: #3c3c3c;
+    font-size: 14px;
+}
+
+/*name of each section and deco image below it*/
+.section_title {
+    margin: 0 auto;
+    text-align: center;
+}
+h1:after, h2:after {
+    content: url(../img/underline_deco.png);
+    display: block;
+    width: 254px;
+    margin: 30px auto;
+}
+
+/*vertical align*/
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+
+    /* =========================================== Index page ============================================== */
+#start_page {
+    height: 100%;
+    background: #f0f1f2 url("../img/1_bg_pumpkins.jpg") no-repeat /*fixed*/ top;
+    background-size: cover;
+}
+
+#start_page .navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+/*hover for menu items*/
+#start_page li:focus, li:hover {
+    box-shadow: 0 0 0 1px #000;
+}
+
+#start_page .slogan {
+    width: 40%;
+    margin: 20% auto 20% 60%;
+    font-weight: 300;
+    top: 25%;
+}
+
+
+/* =========================================== иконки с чайником и т.д. GENERAL POINTS ============================================== */
+#general_points {
+    max-height: 380px;
+    background-color: #f9c50f;
+    font-size: 16px;
+}
+
+#general_points h3{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#general_points .column-wrapper {
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+/* =========================================== THIS MONTH SPECIALS ============================================== */
+#month_specials {
+    max-height: 836px;
+    background-color: #fff;
+}
+
+.specials_general {
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+
+.specials_img_wrapper {
+    width: 100%;
+
+}
+.specials_img_wrapper img{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto;
+}
+
+.specials_description {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.specials_description .dish, .price {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.specials_description .dish:after {
+    content: "";
+    display: block;
+    width: 88px;
+    border-bottom: 1px solid #000;
+    margin: 18px auto;
+}
+
+.price:after {
+    content: "$";
+}
+
+
+/* =========================================== ABOUT US ============================================== */
+#about_us {
+    background: #eeefef url(../img/4_bg.png) no-repeat 90% center;
+    background-size: contain;
+}
+
+#about_us img {
+
+}
+
+#about_us h2 {
+    font-size: 40px;
+}
+
+.about_text {
+    font-size: 30px;
+    text-align: center;
+}
+
+#about_us .about {
+    width: 100%;
+    height: 400px;
+}
+
+#about_us .signature {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+
+/* =========================================== MENU ============================================== */
+#menu {
+    background-color: #fff;
+}
+
+/*one column in menu*/
+#menu .menu {
+    background-color: #fff;
+}
+
+#menu .menu_wrap {
+    width: 100%;
+}
+
+/*filters in menu*/
+.menu_wrap .filter_wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.menu_wrap .filter_wrap .slider-nav ul {
+    list-style: none;
+}
+
+.menu_wrap .filter_wrap .slider-nav li {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+
+    font-size: 18px;
+    color: #3c3c3c;
+    text-transform: capitalize;
+}
+
+.filter_wrap .slider-nav li:hover, li:focus{
+    border: 1px solid #3c3c3c;
+}
+
+/*wrapper for one dish, its price and ingredients*/
+#menu .dish_wrap{
+    background: inherit;
+    margin: 15px 0;
+}
+
+/*wrapper with dish name and its price*/
+#menu .dish_in_menu {
+    background: inherit;
+    font-size: 18px;
+}
+
+/*dot leaders between the dish name and its price*/
+#menu .dish_in_menu:before {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 0;
+    line-height: 0;
+    border-bottom: 2px dotted #3c3c3c;
+}
+/*name of te dish in menu*/
+#menu .dish_name {
+    background: inherit;
+    display: inline;
+    z-index: 1;
+    padding-right: 5px;
+    text-transform: uppercase;
+}
+/*price of the dish*/
+#menu .price {
+    background: inherit;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 5px;
+    text-align: right;
+    z-index: 2;
+}
+
+/*ingredients below the dish name in menu*/
+#menu .dish_ingredients{
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* =========================================== SPECIAL OFFER ============================================== */
+#offer {
+    background: #f7f7f7 url(../img/bg_offer.jpg) no-repeat 21% top;
+    background-size: cover;
+}
+
+#offer .countdown_timer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#offer .offer_text{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#offer .offer_text span{
+    color: burlywood;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#countdown {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* =========================================== NEWS ============================================== */
+#news{
+    background-color: #fff;
+}
+
+#news .slick_news {
+    background-color: #f7f7f7;
+    margin: 0 auto;
+
+}
+
+#news .slick_news img{
+    display: inline-block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* =========================================== TESTIMONIALS ============================================== */
+#testimonials {
+    background: #f7f7f7 url(../img/bg_testimonials.jpg) no-repeat 21% top;
+    background-size: cover;
+}
+
+#testimonials .slick_testimonials {
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+#testimonials .slide{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*resizing and making photos round*/
+#testimonials .photo-round {
+    width: 130px;
+    border-radius: 50%;
+}
+
+#testimonials .testimonial_text {
+    margin-left: 30px;
+    margin-bottom: 25px;
+
+    text-align: left;
+    font-size: 16px;
+}
+
+#testimonials .testimonial_text .main_text {
+    margin-bottom: 15px;
+    color: #81868e;
+    line-height: 28px;
+}
+
+#testimonials .testimonial_text .user_name {
+    text-transform: capitalize;
+    line-height: 24px;
+    font-weight: 700;
+    color: burlywood;
+}
+
+
+/*for content inside of each slide*/
+#testimonials .slide {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* =========================================== CONTACT US ============================================== */
+#contact_us {
+    height: 100vh;
+    background: #eeefef url(../img/5_bg.jpg) no-repeat 21% top;
+    background-size: cover;
+}
+
+#contact_us h4{
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact_info a{
+     text-decoration: none;
+     color: inherit;
+ }
+
+.contact_info a:hover{
+    cursor: pointer;
+}
+
+#contact_us .contact_form {
+    margin-top: 50px;
+}
+
+#contact_us .contact_form input {
+    width: 100%;
+    padding: 0 0 10px 20px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+#contact_us .contact_form textarea {
+    width: 100%;
+    padding: 0 0 10px 20px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    resize: none;
+}
+
+#contact_us .contact_form input[type="text"], input[type="email"], textarea {
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact_us .contact_form button {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #3c3c3c;
+    background: none;
+
+}
+#contact_us .contact_form button:hover {
+    background-color: #3c3c3c;
+    color: #fff;
+    opacity: 0.8;
+}
+
+
+/*============== modal window with Google map ================*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(209, 209, 209, 0.8);
+}
+
+.modal-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f7f7f7;
+    padding: 30px;
+}
+
+#map {
+    margin: 0 auto;
+    width: 700px;
+    height: 440px;
+    border: 1px solid black;
+}
+
+
+
+/*=================================================================================*/
+/*Back to top button*/
+   .button-top {
+       display: inline-block;
+       height: 40px;
+       width: 40px;
+       border-radius: 50%;
+       position: fixed;
+       bottom: 40px;
+       right: 10px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+       overflow: hidden;
+       text-indent: 100%;
+       white-space: nowrap;
+       background: rgba(0, 0, 0, 0.8) url('../img/arrow_top.svg') no-repeat center 50%;
+       visibility: hidden;
+       opacity: 0;
+       -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+       transition: all 0.3s;
+   }
+
+.button-top.button-visible {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.button-top:hover {
+    background-color: #000;
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 768px) {
+    .button-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .button-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+/*=================================================================================*/
