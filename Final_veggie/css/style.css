@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 70px 0;
 
-    font-family: Merriweather, sans-serif;
+    font-family: Merriweather, Arial, sans-serif;
     font-weight: 300;
     color: #3c3c3c;
     font-size: 14px;
@@ -292,6 +292,7 @@ h1:after, h2:after {
 
 #countdown {
     text-transform: uppercase;
+    font-family: Arial, sans-serif;
     font-size: 48px;
     font-weight: 700;
 }
