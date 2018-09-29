@@ -52,7 +52,7 @@ h1:after, h2:after {
 }
 
 
-    /* =========================================== Index page ============================================== */
+/* =========================================== Index page ============================================== */
 #start_page {
     height: 100%;
     background: #f0f1f2 url("../img/1_bg_pumpkins.jpg") no-repeat /*fixed*/ top;
@@ -77,7 +77,7 @@ h1:after, h2:after {
 }
 
 
-/* =========================================== иконки с чайником и т.д. GENERAL POINTS ============================================== */
+/* =========================================== GENERAL POINTS ============================================== */
 #general_points {
     max-height: 380px;
     background-color: #f9c50f;
@@ -150,6 +150,35 @@ h1:after, h2:after {
     content: "$";
 }
 
+
+/* =========================================== SPECIAL OFFER ============================================== */
+#offer {
+    background: #f7f7f7 url(../img/bg_offer.jpg) no-repeat 21% top;
+    background-size: cover;
+}
+
+#offer .countdown_timer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#offer .offer_text{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#offer .offer_text span{
+    color: burlywood;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#countdown {
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
 
 /* =========================================== ABOUT US ============================================== */
 #about_us {
@@ -268,51 +297,7 @@ h1:after, h2:after {
     font-style: italic;
 }
 
-/* =========================================== SPECIAL OFFER ============================================== */
-#offer {
-    background: #f7f7f7 url(../img/bg_offer.jpg) no-repeat 21% top;
-    background-size: cover;
-}
 
-#offer .countdown_timer {
-    margin: 0 auto;
-    text-align: center;
-}
-
-#offer .offer_text{
-    margin: 0 auto;
-    text-align: center;
-}
-
-#offer .offer_text span{
-    color: burlywood;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-#countdown {
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-}
-
-/* =========================================== NEWS ============================================== */
-#news{
-    background-color: #fff;
-}
-
-#news .slick_news {
-    background-color: #f7f7f7;
-    margin: 0 auto;
-
-}
-
-#news .slick_news img{
-    display: inline-block;
-    width: 100%;
-    border-radius: 15px;
-}
 
 /* =========================================== TESTIMONIALS ============================================== */
 #testimonials {
@@ -370,6 +355,25 @@ h1:after, h2:after {
     justify-content: space-between;
     align-items: flex-start;
 }
+
+/* =========================================== NEWS ============================================== */
+#news{
+    background-color: #fff;
+}
+
+#news .slick_news {
+    background-color: #f7f7f7;
+    margin: 0 auto;
+
+}
+
+#news .slick_news img{
+    display: inline-block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
 /* =========================================== CONTACT US ============================================== */
 #contact_us {
     height: 100vh;
@@ -437,7 +441,7 @@ h1:after, h2:after {
 }
 
 
-/*============== modal window with Google map ================*/
+/*============================= modal window with Google map ====================================*/
 .modal {
     display: none;
     position: fixed;
@@ -466,28 +470,27 @@ h1:after, h2:after {
 
 
 
-/*=================================================================================*/
-/*Back to top button*/
-   .button-top {
-       display: inline-block;
-       height: 40px;
-       width: 40px;
-       border-radius: 50%;
-       position: fixed;
-       bottom: 40px;
-       right: 10px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+/*===================== Back to top button ==================*/
+.button-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
-       overflow: hidden;
-       text-indent: 100%;
-       white-space: nowrap;
-       background: rgba(0, 0, 0, 0.8) url('../img/arrow_top.svg') no-repeat center 50%;
-       visibility: hidden;
-       opacity: 0;
-       -webkit-transition: all 0.3s;
-       -moz-transition: all 0.3s;
-       transition: all 0.3s;
-   }
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.8) url('../img/arrow_top.svg') no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
 
 .button-top.button-visible {
     visibility: visible;
