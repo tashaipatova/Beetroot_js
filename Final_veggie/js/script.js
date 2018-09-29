@@ -144,5 +144,5 @@ function initMap() {
     var map = new google.maps.Map(
         document.getElementById('map'), {zoom: 15, disableDefaultUI: true, center: requiredPlacement});
     // The marker, positioned at requiredPlacement
-    var marker = new google.maps.Marker({position: requiredPlacement, map: map, icon: 'img/favicon.png'});
+    var marker = new google.maps.Marker({position: requiredPlacement, map: map, icon: 'img/map_icon.png'});
 }
